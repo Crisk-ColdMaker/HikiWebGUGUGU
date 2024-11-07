@@ -18,11 +18,9 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(
-            to right bottom, rgba(56, 53, 53, 0.56),
-            rgba(0, 0, 0, 0.74)
-    ),
-    url("../images/HikiBackground1.png");
+    background-image: linear-gradient(to right bottom, rgba(56, 53, 53, 0.56),
+            rgba(0, 0, 0, 0.74)),
+        url("../images/HikiBackground1.png");
     background-size: cover;
     background-position: top;
     position: relative;
@@ -48,11 +46,13 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -73,17 +73,41 @@ body {
     animation-duration: 0.5s;
 }
 
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 40px;
+    display: inline-block;
+    
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    font-weight:900;
+    border-radius: 20px;
+}
+
 @keyframes moveInLeft {
     0% {
-       opacity: 0;
+        opacity: 0;
         transform: translateX(-100px);
     }
-    
-    80%{
+
+    80% {
         transform: translateX(10px);
     }
-    
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
@@ -95,12 +119,13 @@ body {
         transform: translateX(100px);
     }
 
-    80%{
+    80% {
         transform: translateX(-10px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
+
 }
