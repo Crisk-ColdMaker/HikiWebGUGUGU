@@ -34,7 +34,7 @@ body {
 }
 
 .logo {
-    width: 90px;
+    width: 150px;
     z-index: 2;
     border-radius: 500px;
     border: 5px #ffffff solid;
@@ -81,6 +81,7 @@ body {
     display: inline-block;
     border-radius: 20px;
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover {
@@ -99,6 +100,35 @@ body {
     font-weight: 900;
 }
 
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn-white::after {
+    background-color: #fff;
+    color: #777;
+    font-weight: 900;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white:hover:after { 
+    transform: scale(1.2);
+}
+
+.btn-animation {
+    animation: moveButtonIn .5s ease-out .1s;
+    animation-fill-mode: backwards;
+}
+
+
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -115,6 +145,8 @@ body {
     }
 }
 
+
+
 @keyframes moveInRight {
     0% {
         opacity: 0;
@@ -130,4 +162,14 @@ body {
         transform: translateX(0);
     }
 
+}
+
+@keyframes moveButtonIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
